@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest Brave Browser disk image and builds a package. The installer package includes a preinstall script that will check for an existing Brave Browser.app in /Applications and remove it if found.</string>
+    <string>Downloads latest Brave Browser disk image and builds a package.</string>
     <key>Identifier</key>
     <string>com.github.macmiller.pkg.bravebrowser</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Brave Browser</string>
+        <string>BraveBrowser</string>
     </dict>
     <key>ParentRecipe</key>
     <string>com.github.macmiller.download.bravebrowser</string>
@@ -64,8 +64,6 @@
                     <string>%bundleid%</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
-                    <key>scripts</key>
-                    <string>Scripts</string>
                     <key>chown</key>
                     <array>
                         <dict>
