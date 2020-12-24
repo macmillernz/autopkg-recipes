@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>BraveBrowser</string>
+        <string>Brave Browser</string>
     </dict>
     <key>ParentRecipe</key>
     <string>com.github.macmiller.download.bravebrowser</string>
