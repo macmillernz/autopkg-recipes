@@ -42,7 +42,7 @@ You can also return a part of the version other than the first part. For example
 ```
 <dict>
     <key>Processor</key>
-    <string>com.github.homebysix.VersionSplitter/VersionSplitter</string>
+    <string>com.github.macmiller.VersionSplitter/VersionSplitter</string>
     <key>Arguments</key>
     <dict>
         <key>index</key>

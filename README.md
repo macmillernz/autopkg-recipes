@@ -19,3 +19,13 @@ On the Recipes & Repos tab. Manually add this repos URL and click add.
 ### JSS Importer
 
 See setup instructions here https://github.com/jssimporter/JSSImporter/wiki/Installation-and-Setup
+
+### Dependancies
+
+Version Splitter
+
+### Best practice
+
+Best practice is to include the below chown array to ensure only root can modify.
+If possible, include any pre or post install scripts in the package.
+If required, include any launch agents/daemons or privileged helpers in the package.
