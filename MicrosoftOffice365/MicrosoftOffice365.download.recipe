@@ -41,7 +41,7 @@
                 <key>url</key>
                 <string>%DOWNLOAD_URL_BASE%%ID%</string>
                 <key>filename</key>
-                <string>%VENDOR%_%SOFTWARETITLE1%_%SOFTWARETITLE2%_%SOFTWARETITLE3%_%SOFTWARETITLE4%_%version%.pkg</string>
+                <string>%VENDOR%%SOFTWARETITLE1%%SOFTWARETITLE2%%SOFTWARETITLE3%-%version%.pkg</string>
             </dict>
         </dict>
         <dict>
