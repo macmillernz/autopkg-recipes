@@ -12,6 +12,12 @@
 	<dict>
 		<key>NAME</key>
 		<string>Microsoft Azure Storage Explorer</string>
+		<key>VENDOR</key>
+		<string>Microsoft</string>
+		<key>SOFTWARETITLE</key>
+		<string>AutoUpdate</string>
+		<key>SHORTTITLE</key>
+		<string>AzureStorageExplorer</string>		
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
@@ -22,11 +28,31 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>app_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Microsoft Azure Storage Explorer.app</string>
+				<key>pkg_request</key>
+				<dict>
+					<key>chown</key>
+					<array>
+						<dict>
+							<key>group</key>
+							<string>admin</string>
+							<key>path</key>
+							<string>Applications</string>
+							<key>user</key>
+							<string>root</string>
+						</dict>
+					</array>
+					<key>id</key>
+					<string>%bundleid%</string>
+					<key>options</key>
+					<string>purge_ds_store</string>
+					<key>pkgdir</key>
+					<string>%RECIPE_CACHE_DIR%</string>
+				</dict>
+				<key>pkgname</key>
+				<string>%VENDOR%%SHORTTITLE%-%version%</string>
 			</dict>
 			<key>Processor</key>
-			<string>AppPkgCreator</string>
+			<string>PkgCreator</string>
 		</dict>
 	</array>
 </dict>
