@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest OpenJDK 13 for macOS.</string>
+    <string>Downloads the latest OpenJDK 15 for macOS.</string>
     <key>Identifier</key>
-    <string>com.github.macmiller.download.OpenJDK13</string>
+    <string>com.github.macmiller.download.OpenJDK15</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>OpenJDK 13</string>
+        <string>OpenJDK 15</string>
         <key>MAJOR_VERSION</key>
-        <string>13</string>
+        <string>15</string>
         <key>VENDOR</key>
         <string>OpenJDK</string>
         <key>SOFTWARETITLE</key>

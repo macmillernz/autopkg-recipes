@@ -5,11 +5,11 @@
       <key>Description</key>
       <string>Downloads the current release version of OpenJDK 13 and builds a package.</string>
       <key>Identifier</key>
-      <string>com.github.macmiller.pkg.OpenJDK13</string>
+      <string>com.github.macmiller.pkg.OpenJDK15</string>
       <key>Input</key>
       <dict>
          <key>NAME</key>
-         <string>OpenJDK 13</string>
+         <string>OpenJDK 15</string>
          <key>VENDOR</key>
          <string>OpenJDK</string>
          <key>SOFTWARETITLE</key>
@@ -18,7 +18,7 @@
          <string>JDK</string>
       </dict>
       <key>ParentRecipe</key>
-      <string>com.github.macmiller.download.OpenJDK13</string>
+      <string>com.github.macmiller.download.OpenJDK15</string>
       <key>MinimumVersion</key>
       <string>1.0.0</string>
       <key>Process</key>
