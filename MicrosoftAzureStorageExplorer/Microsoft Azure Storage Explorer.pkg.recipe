@@ -12,6 +12,12 @@
         <dict>
             <key>NAME</key>
             <string>Microsoft Azure Storage Explorer</string>
+            <key>VENDOR</key>
+            <string>Microsoft</string>
+            <key>SOFTWARETITLE</key>
+            <string>Azure Storage Explorer</string>
+            <key>SHORTTITLE</key>
+            <string>AzureStorageExplorer</string>
         </dict>
         <key>ParentRecipe</key>
         <string>com.github.macmiller.download.MicrosoftAzureStorageExplorer</string>
@@ -27,6 +33,17 @@
                 </dict>
             </dict>
             <dict>
+                <key>Arguments</key>
+                <dict>
+                <key>input_plist_path</key>
+                <string>%RECIPE_CACHE_DIR%/downloads/extract/Microsoft Azure Storage Explorer.app/Contents/Info.plist</string>
+                <key>plist_version_key</key>
+                <string>CFBundleVersion</string>
+                </dict>
+                <key>Processor</key>
+                <string>Versioner</string>
+            </dict>
+            <dict>
                 <key>Processor</key>
                 <string>PkgCopier</string>
                 <key>Arguments</key>
@@ -34,9 +51,9 @@
                     <key>source_pkg</key>
                     <string>%pathname%</string>
                     <key>pkg_path</key>
-                    <string>%RECIPE_CACHE_DIR%/%VENDOR%%SOFTWARETITLE%-%version%.pkg</string>
+                    <string>%RECIPE_CACHE_DIR%/%VENDOR%%SHORTTITLE%-%version%.pkg</string>
                 </dict>
-                </dict>
+            </dict>
             <dict>
                 <key>Processor</key>
                 <string>PathDeleter</string>

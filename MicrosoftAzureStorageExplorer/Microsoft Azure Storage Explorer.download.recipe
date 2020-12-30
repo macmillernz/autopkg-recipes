@@ -12,6 +12,10 @@
         <dict>
             <key>NAME</key>
             <string>Microsoft Azure Storage Explorer</string>
+            <key>VENDOR</key>
+            <string>Microsoft</string>
+            <key>SOFTWARETITLE</key>
+            <string>Azure Storage Explorer</string>
             <key>PRODUCTID</key>
             <string>708342</string>
             <key>DOWNLOADURL</key>
