@@ -11,7 +11,7 @@
 		<key>BUNDLE_ID</key>
 		<string>com.parallels.desktop.installer</string>
 		<key>MAJOR_VERSION</key>
-		<string>14</string>
+		<string>15</string>
 		<key>NAME</key>
 		<string>Parallels Desktop</string>
 	</dict>
