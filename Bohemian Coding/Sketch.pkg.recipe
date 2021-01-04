@@ -7,16 +7,16 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Sketch and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.macmiller.pkg.Sketch</string>
+	<string>com.github.macmiller.pkg.BohemianSketch</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>BohemianSketch</string>
+		<string>Sketch</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.macmiller.download.Sketch</string>
+	<string>com.github.macmiller.download.BohemianSketch</string>
 	<key>Process</key>
 	<array>
 		<dict>
