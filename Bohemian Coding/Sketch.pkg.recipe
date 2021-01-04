@@ -23,7 +23,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>app_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Sketch.app</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%App/Sketch.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>AppPkgCreator</string>
