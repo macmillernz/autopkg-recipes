@@ -2,45 +2,67 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Description</key>
-    <string>Downloads the latest stable version of Wireshark.</string>
-    <key>Identifier</key>
-    <string>com.github.macmiller.download.Wireshark</string>
-    <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>Wireshark</string>
-    </dict>
-    <key>MinimumVersion</key>
-    <string>0.4.0</string>
-    <key>Process</key>
-    <array>
+	<key>Description</key>
+	<string>Downloads the latest version of Wireshark.</string> 
+	<key>Identifier</key>
+	<string>com.github.macmiller.Wireshark.download</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Wireshark</string>
+	</dict>
+	<key>Process</key>
+	<array>
         <dict>
             <key>Processor</key>
-            <string>URLDownloader</string>
+            <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://www.wireshark.org/download/osx/Wireshark%20Latest%20Intel%2064.dmg</string>
-                <key>filename</key>
-                <string>%NAME%.dmg</string>
+                <string>https://www.wireshark.org/download.html</string>
+                <key>re_pattern</key>
+                <string>href="https:\/\/[^"]*(?P&lt;match&gt;osx/Wireshark[^"]*Intel[^"]*64\.dmg)"</string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
             </dict>
         </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
-        <dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+                <key>url</key>
+                <string>https://www.wireshark.org/download/%match%</string>
+				<key>filename</key>
+				<string>%NAME%.dmg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pathname%/Wireshark.app/Contents/Info.plist</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pathname%/Wireshark*.app</string>
+				<string>%pathname%/Wireshark.app</string>
 				<key>requirement</key>
-				<string>anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "7Z6EMTD2C6"</string>
+				<string>identifier "org.wireshark.Wireshark" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "7Z6EMTD2C6"</string>
 			</dict>
 		</dict>
-    </array>
+	</array>
 </dict>
 </plist>
