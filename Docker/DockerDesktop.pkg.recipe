@@ -44,6 +44,15 @@
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0755</string>
+					<key>Library</key>
+					<string>0755</string>
+					<key>Library/PrivilegedHelperTools</key>
+					<string>0755</string>
+					<key>Library/LaunchDaemons</key>
+					<string>0755</string>
 				<dict/>
 			</dict>
 		</dict>
