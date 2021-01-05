@@ -33,7 +33,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
 			</dict>
 		</dict>
 		<dict>
@@ -53,9 +53,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg/Docker.app</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg/%NAME%.app</string>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/Docker.app</string>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/%NAME%.app</string>
 				<key>overwrite</key>
 				<true/>
 			</dict>
