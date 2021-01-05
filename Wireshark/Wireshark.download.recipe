@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Wireshark.</string> 
 	<key>Identifier</key>
-	<string>com.github.macmiller.Wireshark.download</string>
+	<string>com.github.macmiller.download.Wireshark</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
