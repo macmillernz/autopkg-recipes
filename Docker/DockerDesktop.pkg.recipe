@@ -49,10 +49,6 @@
 					<string>0755</string>
 					<key>Library</key>
 					<string>0755</string>
-					<key>Library/PrivilegedHelperTools</key>
-					<string>0755</string>
-					<key>Library/LaunchDaemons</key>
-					<string>0755</string>
 				<dict/>
 			</dict>
 		</dict>
