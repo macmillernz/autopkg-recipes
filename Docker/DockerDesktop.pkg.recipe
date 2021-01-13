@@ -40,7 +40,7 @@
             <key>Arguments</key>
             <dict>
                 <key>pkgroot</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                <string>%RECIPE_CACHE_DIR%/pkgroot</string>
                 <key>pkgdirs</key>
                 <dict>
                     <key>Applications</key>
@@ -54,7 +54,7 @@
             <key>Arguments</key>
             <dict>
                 <key>library</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/pkgroot</string>
+                <string>%RECIPE_CACHE_DIR%/pkgroot/Library</string>
                 <key>pkgdirs</key>
                 <dict>
                     <key>PrivilegedHelperTools</key>
