@@ -36,27 +36,13 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>PkgRootCreator</string>
+            <string>Copier</string>
             <key>Arguments</key>
             <dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
-				<key>pkgdirs</key>
-                <dict>
-                    <key>Applications</key>
-                    <string>0775</string>
-                    <key>Library</key>
-                    <string>0775</string>
-                </dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Library</string>
-				<key>pkgdirs</key>
-                <dict>
-                    <key>PrivilegedHelperTools</key>
-                    <string>0775</string>
-                    <key>LaunchDaemons</key>
-                    <string>0775</string>
-                </dict>
+                <key>source_path</key>
+                <string>%RECIPE_REPO_DIR%/Docker/pkgroot</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/pkgroot</string>
             </dict>
         </dict>
         <dict>
