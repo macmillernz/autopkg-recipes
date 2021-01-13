@@ -39,17 +39,22 @@
             <string>PkgRootCreator</string>
             <key>Arguments</key>
             <dict>
-                <key>pkgroot</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
-                <key>pkgdirs</key>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
+				<key>pkgdirs</key>
                 <dict>
                     <key>Applications</key>
                     <string>0775</string>
                     <key>Library</key>
                     <string>0775</string>
-                    <key>Library\PrivilegedHelperTools</key>
+                </dict>
+				<key>library</key>
+				<string>%RECIPE_CACHE_DIR%/pkgroot/Library</string>
+				<key>pkgdirs</key>
+                <dict>
+                    <key>PrivilegedHelperTools</key>
                     <string>0775</string>
-                    <key>Library\LaunchDaemons</key>
+                    <key>LaunchDaemons</key>
                     <string>0775</string>
                 </dict>
             </dict>
