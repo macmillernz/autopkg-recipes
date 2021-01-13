@@ -48,7 +48,7 @@
                     <key>Library</key>
                     <string>0775</string>
                 </dict>
-				<key>library</key>
+				<key>Library</key>
 				<string>%RECIPE_CACHE_DIR%/pkgroot/Library</string>
 				<key>pkgdirs</key>
                 <dict>
