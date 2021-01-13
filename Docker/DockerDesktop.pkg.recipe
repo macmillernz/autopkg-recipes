@@ -21,57 +21,57 @@
 		<key>SHORTNAME</key>
 		<string>Docker</string>
 	</dict>
-	<key>MinimumVersion</key>
-	<string>1.4.1</string>
-	<key>ParentRecipe</key>
-	<string>com.github.macmiller.download.DockerDesktop</string>
-	<key>Process</key>
-	<array>
-		<dict>
-			<key>Processor</key>
-			<string>AppDmgVersioner</string>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
-			<key>Arguments</key>
-			<dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot</string>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0755</string>
-					<key>Library</key>
-					<string>0755</string>
-				<dict/>
-			</dict>
-		</dict>
+    <key>ParentRecipe</key>
+    <string>com.github.macmiller.download.DockerDesktop</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>AppDmgVersioner</string>
+            <key>Arguments</key>
+            <dict>
+                <key>dmg_path</key>
+                <string>%pathname%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgRootCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkgroot</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%</string>
+                <key>pkgdirs</key>
+                <dict>
+                    <key>Applications</key>
+                    <string>0775</string>
+                    <key>Library</key>
+                    <string>0775</string>
+                    <key>Library\PrivilegedHelperTools</key>
+                    <string>0775</string>
+                    <key>Library\LaunchDaemons</key>
+                    <string>0775</string>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%pathname%/%app_name%</string>
+                <key>destination_path</key>
+                <string>%pkgroot%/Applications/%app_name%</string>
+            </dict>
+        </dict>
 		<dict>
 			<key>Processor</key>
 			<string>Copier</string>
 			<key>Arguments</key>
 			<dict>
 				<key>source_path</key>
-				<string>%pathname%/%NAME%.app</string>
-				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/pkgroot/Applications/%NAME%.app</string>
-				<key>overwrite</key>
-				<true/>
-			</dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>Copier</string>
-			<key>Arguments</key>
-			<dict>
-				<key>source_path</key>
-				<string>%pathname%/%NAME%.app/Contents/Library/LaunchServices/com.docker.vmnetd</string>
+				<string>%pathname%/%app_name%/Contents/Library/LaunchServices/com.docker.vmnetd</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/PrivilegedHelperTools/com.docker.vmnetd</string>
 				<key>overwrite</key>
@@ -84,46 +84,31 @@
 			<key>Arguments</key>
 			<dict>
 				<key>source_path</key>
-				<string>%pathname%/%NAME%.app/Contents/Resources/com.docker.vmnetd.plist</string>
+				<string>%pathname%/%app_name%/Contents/Resources/com.docker.vmnetd.plist</string>
 				<key>destination_path</key>
 				<string>%RECIPE_CACHE_DIR%/pkgroot/Library/LaunchDaemons/com.docker.vmnetd.plist</string>
 				<key>overwrite</key>
 				<true/>
 			</dict>
 		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>PkgCreator</string>
-			<key>Arguments</key>
-			<dict>
-				<key>pkg_request</key>
+        <dict>
+            <key>Processor</key>
+            <string>PkgCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_request</key>
 				<dict>
 					<key>pkgroot</key>
 					<string>%RECIPE_CACHE_DIR%/pkgroot</string>
 					<key>pkgname</key>
-					<string>%name%-%version%</string>
+					<string>%SHORTNAME%-%version%</string>
 					<key>pkgtype</key>
 					<string>flat</string>
-					<key>id</key>
-					<string>%bundleid%</string>
 					<key>version</key>
 					<string>%version%</string>
-					<key>scripts</key>
-					<string>Scripts</string>
 				</dict>
-			</dict>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>PathDeleter</string>
-			<key>Arguments</key>
-			<dict>
-				<key>path_list</key>
-				<array>
-					<string></string>
-				</array>
-			</dict>
-		</dict>
-	</array>
+            </dict>
+        </dict>
+    </array>
 </dict>
 </plist>
