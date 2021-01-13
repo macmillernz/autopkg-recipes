@@ -47,6 +47,11 @@
                     <string>0775</string>
                 </dict>
             </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgRootCreator</string>
+            <key>Arguments</key>
             <dict>
                 <key>library</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/pkgroot</string>
