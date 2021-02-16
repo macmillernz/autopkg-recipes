@@ -39,7 +39,7 @@ See the following URLs for more info:
                 <string>%LOCALE%</string>
             </dict>
             <key>Processor</key>
-            <string>MozillaURLProvider</string>
+            <string>com.github.macmiller.SharedProcessors/MozillaURLProvider</string>
         </dict>
         <dict>
             <key>Arguments</key>

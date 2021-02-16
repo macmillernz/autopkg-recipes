@@ -32,7 +32,7 @@
                 <string>%OS_VERSION%</string>
             </dict>
             <key>Processor</key>
-            <string>AdobeReaderURLProvider</string>
+            <string>com.github.macmiller.SharedProcessors/AdobeReaderURLProvider</string>
         </dict>
         <dict>
             <key>Arguments</key>

@@ -24,7 +24,7 @@ and enabling installation on non-boot volumes.</string>
     <array>
         <dict>
             <key>Processor</key>
-            <string>AdobeReaderRepackager</string>
+            <string>com.github.macmiller.SharedProcessors/AdobeReaderRepackager</string>
             <key>Arguments</key>
             <dict>
                 <key>dmg_path</key>

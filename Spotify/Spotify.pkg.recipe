@@ -33,7 +33,7 @@
 				<string>.g</string>
 			</dict>
 			<key>Processor</key>
-			<string>com.github.macmiller.VersionSplitter/VersionSplitter</string>
+			<string>com.github.macmiller.SharedProcessors/VersionSplitter</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
